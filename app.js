@@ -3,7 +3,7 @@ const bodyParser = require("body-parser");
 
 const app = express();
 
-let itemArray = [];
+let itemArray = ["Buy Food", "Cook Food", "Eat Food"];
 
 app.set("view engine", "ejs");
 
@@ -11,9 +11,9 @@ app.use(bodyParser.urlencoded({extended: true}));
 
 app.get("/", function(req, res) {
     
- const today = new Date();
+ let today = new Date();
  
- const options = {
+ let options = {
     weekday: "long",
     day: "numeric",
     month: "long"
